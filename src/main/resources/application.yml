@@ -1,0 +1,51 @@
+spring:
+  profiles:
+    active: @profiles.active@
+  jmx.enabled: false
+  jackson:
+    time-zone: Asia/Shanghai
+server:
+  port: 9081
+  servlet.context-path: /bkwsp
+  servlet:
+    session:
+      timeout: 900
+environment: -TZ=Asia/Shanghai
+#logging:
+#  level:
+#    root: info
+
+
+---
+spring:
+  profiles: loc
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bk_data?serverTimezone=Asia/Shanghai&useSSL=true&&autoReconnect=true
+  mail:
+    host: smtp.qq.com
+    username: 1306507227@qq.com
+    password: yshmxvxmgaerbagi
+    properties.mail.smtp.port: 587 #465,587
+    default-encoding: utf-8
+webActivatePath: http://localhost/bkweb/#/activate
+
+---
+spring:
+  profiles: pr
+  #mysql
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://119.45.204.106:3306/bk_data?serverTimezone=UTC&autoReconnect=true
+    username: root
+    password: 123456
+  mail:
+    host: smtp.qq.com
+    username: 1306507227@qq.com
+    password: yshmxvxmgaerbagi
+    properties.mail.smtp.port: 587
+    default-encoding: utf-8
+
+webActivatePath: http://119.45.204.106/bkweb/#/activate

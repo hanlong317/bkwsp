@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.bkwsp.base.mapper.EmployeeMapper">
+
+<!--    <resultMap id="resultMap1" type="com.example.bkwsp.base.entity.Employee">-->
+<!--&lt;!&ndash;        <result column="USER_ID" jdbcType="VARCHAR" property="userId"></result>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="NAME" jdbcType="VARCHAR" property="name"></result>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="ID_NUMBER" jdbcType="VARCHAR" property="idNumber"></result>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="PASS_WORD" jdbcType="VARCHAR" property="passWord"></result>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="IS_AVAILABLE" jdbcType="VARCHAR" property="isAvailable"></result>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="EMAIL" jdbcType="VARCHAR" property="email"></result>&ndash;&gt;-->
+<!--&lt;!&ndash;        <result column="USER_NAME" jdbcType="VARCHAR" property="userName"></result>&ndash;&gt;-->
+
+<!--        <result column="user_id" property="userId" jdbcType="VARCHAR" javaType="java.lang.String" />-->
+<!--        <result column="name"  property="name" jdbcType="VARCHAR" javaType="java.lang.String"/>-->
+<!--        <result column="id_number"  property="idNumber" jdbcType="VARCHAR" javaType="java.lang.String"/>-->
+<!--        <result column="pass_word"  property="passWord" jdbcType="VARCHAR" javaType="java.lang.String"/>-->
+<!--        <result column="is_available"  property="isAvailable" jdbcType="VARCHAR" javaType="java.lang.String"/>-->
+<!--        <result column="email"  property="email" jdbcType="VARCHAR" javaType="java.lang.String"/>-->
+<!--        <result column="user_name"  property="userName" jdbcType="VARCHAR" javaType="java.lang.String"/>-->
+<!--    </resultMap>-->
+<!--    <sql id="failed_select">-->
+<!--&#45;&#45;         USER_ID, NAME, ID_NUMBER, PASS_WORD, IS_AVAILABLE, EMAIL, USER_NAME-->
+<!--        user_id, name, id_number, pass_word, is_available, email, user_name-->
+<!--    </sql>-->
+
+<!--    <select id="find" parameterType="com.example.bkwsp.base.entity.Employee" resultMap="resultMap1">-->
+<!--        SELECT-->
+<!--        <include refid="failed_select" />-->
+<!--        FROM TM_EMPLOYEE-->
+<!--        <where>-->
+<!--            <if test="userId != null">-->
+<!--                AND USER_ID = #{userId ,jdbcType=VARCHAR }-->
+<!--            </if>-->
+<!--            <if test="name != null">-->
+<!--                AND NAME LIKE '%' || #{name ,jdbcType=VARCHAR } || '%'-->
+<!--            </if>-->
+<!--            <if test="idNumber != null">-->
+<!--                AND ID_NUMBER LIKE '%' || #{idNumber ,jdbcType=VARCHAR } || '%'-->
+<!--            </if>-->
+<!--            <if test="passWord != null">-->
+<!--                AND PASS_WORD LIKE '%' || #{passWord ,jdbcType=VARCHAR } || '%'-->
+<!--            </if>-->
+<!--            <if test="isAvailable != null">-->
+<!--                AND IS_AVAILABLE LIKE '%' || #{isAvailable ,jdbcType=VARCHAR } || '%'-->
+<!--            </if>-->
+<!--            <if test="email != null">-->
+<!--                AND EMAIL LIKE '%' || #{email ,jdbcType=VARCHAR } || '%'-->
+<!--            </if>-->
+<!--            <if test="userName != null">-->
+<!--                AND USER_NAME LIKE '%' || #{userName ,jdbcType=VARCHAR } || '%'-->
+<!--            </if>-->
+<!--        </where>-->
+<!--    </select>-->
+
+</mapper>
